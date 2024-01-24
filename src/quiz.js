@@ -22,7 +22,7 @@ constructor(questions, timeLimit, timeRemaining){
         for(let i = 0; i < this.questions.length; i++){
             const j = Math.floor(Math.random() * (i+1));
             [this.questions[i], this.questions[j]] = [this.questions[j], this.questions[i]]
-        }
+        } 
     }
     // 5. checkAnswer(answer)
     checkAnswer(answer){
@@ -36,5 +36,8 @@ constructor(questions, timeLimit, timeRemaining){
         if(this.currentQuestionIndex === this.questions.length){
             return true
         }
+    }
+    filterQuestionsByDifficulty(difficulty){
+
     }
 }
